@@ -1,0 +1,34 @@
+function pass ()
+	returns: nil
+	A placeholder function that does nothing. Mainly for internal
+	use.
+
+function newobject(class, name, table)
+	returns: table
+	This function initializes an object of a certain class. (In the
+	object-oriented sense.)
+
+table room
+	The class that takes care of rooms.
+
+table room.all
+	Contains all rooms.
+
+function room.enter (self)
+	returns: true/false
+	A function called when the player tries to go in a certain room.
+	If it returns true, the player is not allowed to get in. Default
+	function: pass
+
+function room.leave (self)
+	returns: true/false
+	A function called when the player tries to leave a certain room.
+	If it returns true, the player is not allowed to get out. Default
+	function: pass
+
+string room.description
+	A string that is displayed upon room entry.
+
+function room:new(name, t)
+	returns: table
+	Initializes a new room object.
